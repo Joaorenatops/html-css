@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* em HTML é id = em CSS é # (serquilha)
+ em HTML é class = em CSS é . (ponto)
+ 
+ Qunado eu quero aplicar a mesma configuração em outro ou mais elemntos 
+ usamos as class
+ 
+ E para uma unico elemento eu uso o id
+ 
+ IMPOTANTE : o id é mais forte.*/
+body {
+    background-color: rgb(161, 236, 186);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: rgb(3, 126, 3);
+}
+
+#principal {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color: rgb(12, 168, 62);
+}
+
+.basico {
+    color: rgb(10, 75, 24);
+    font-weight: bold;
+}
+
+.intermediario {
+    color: rgb(124, 117, 11);
+}
+
+.avancado {
+    color: rgb(133, 13, 13);
+}
+.destaque {
+    background-color: #8b8b10;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalahndo com Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <!-- <(taged="_blank">) vai abrir uma nova janela -->
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no github</a></p>
+
+    <p>Você também pode acessar o meu<a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external"> canal no youtube</a></p>
+
+    <h2>Usando links internos</h2>
+    <!-- O parâmetro (rel) : especifica a relação do documento atual e o documento vinculado-->
+    <p>Esta é a primeira página do site. se você quiser, pode acessar também a minha <a href="pag2.html" rel="next">segunda página</a></p>
+
+    <h4>Quando for abrir abas do seu próprio site</h4>
+    <!-- (_self)Vai abrir na própria ABA-->
+    <p>Esta é a primeira página do site. se você quiser, pode acessar também a minha <a href="pag2.html" rel="_self">segunda página</a></p>
+
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html">página de notícias</a></p>
+
+    <p>
+        <h2>Uso do parâmetro rel</h2>
+        <a href="#" rel="next"> Indica que o documento é a próxima parte de uma série</a>
+    </p>
+
+     <p>
+        <a href="#" rel="prev"> Indica que o documento é a parte anterior de uma série</a>
+    </p>
+
+     <p>
+        <a href="#" rel="nofollow"> Indica para o google não seguir o link , usado em propragranda de terceiros</a>
+    </p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livros/CertificadoAceiteDigital.pdf">Baixar certificado PDF</a></li>
+        <li><a href="livros/CertificadoAceiteDigital.zip" download="meucertificado.zip" type="aplication/zip"> Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html> 
