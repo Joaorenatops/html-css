@@ -1,5 +1,62 @@
 @charset "UTF-8";
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+    padding: 0px;
+    margin: 0px;
+}
+
 body, html {
     background-color: lightgrey;
+}
+
+header {
+    background-color: grey;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+menu {
+    display: block; /*O elemento assume a largura total do elemento pai*/
+}
+
+menu > ul {
+    list-style-type: none; /*Tira as bolas ou números*/
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none; /*Tira os as linha sublinhada*/
+    background-color: rgba(80, 77, 77, 0.521);
+    border-top: solid gray;
+}
+
+menu > ul > li > a:hover {
+    background-color: rgb(184, 182, 182);
+}
+
+main {
+    width: 90vw;
+    background-color: white;
+    margin: auto;
+    margin-top:10px ;
+    padding:10px;
+    border-radius: 10px;
+}
+
+article > h2 {
+    padding-bottom: 20px;
+}
+
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px; /*Espaço de parágrafo*/
 }
