@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*Typical decice breakpoints
+----------------------------
+pequenas telas até 600px
+celular de 600px até 768px
+tablet de 768px até 992px
+desktop de 992px até 1200px
+*/
+@media screen and (min-width: 768px){
+    span#burguer {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block; /*Um do lado do outro */
+    }
+    main {
+        width: 768px; /* para o conteúdo não ficar pequeno demais*/
+    }
+}
