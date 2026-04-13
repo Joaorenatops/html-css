@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+  :root {
+  --sidebar-width-collapsed: 70px;
+  --sidebar-width-expanded: 250px;
+  --transition-speed: 0.4s;
+  --bg-color: #1a1a2e;
+}
+
+.sidebar {
+  width: var(--sidebar-width-collapsed);
+  height: 100vh;
+  background-color: var(--bg-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  transition: width var(--transition-speed) ease-in-out;
+  z-index: 1000;
+}
+
+/* Expande ao passar o rato */
+.sidebar:hover {
+  width: var(--sidebar-width-expanded);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  height: 50px;
+  padding: 0 20px;
+  white-space: nowrap; /* Evita que o texto quebre a linha */
+}
+
+.sidebar li a:hover {
+  background-color: #16213e;
+}
+
+.icon {
+  min-width: 30px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.text {
+  opacity: 0; /* Escondido por defeito */
+  transition: opacity 0.3s;
+}
+
+.sidebar:hover .text {
+  opacity: 1; /* Mostra o texto quando o menu expande */
+}
+
+/* Conteúdo ajustado */
+.main-content {
+  margin-left: var(--sidebar-width-collapsed);
+  padding: 40px;
+  transition: margin-left var(--transition-speed);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+        <p>Informações</p>
+   <aside id="mySidebar" class="sidebar">
+  <nav class="sidebar-nav">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="icon">🏠</span>
+          <span class="text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon">👤</span>
+          <span class="text">Perfil</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon">⚙️</span>
+          <span class="text">Definições</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="main-content">
+  <h1>Conteúdo Principal</h1>
+  <p>Passe o rato no menu à esquerda para expandir.</p>
+</main>
+
+    </header>
+    <main>
+
+    </main>
+    <footer></footer>
+</body>
+<script>
+    // Exemplo: Destacar o link ativo ao clicar
+const menuLinks = document.querySelectorAll('.sidebar li a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    menuLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+</script>
+</html>
