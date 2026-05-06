@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+div.conteiner {
+    display: grid;
+    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(4,1fr);
+}
+
+div.caixa1 {
+    background-color: rgba(55, 110, 151, 0.837);
+    text-align: center;
+
+    grid-row: 1/2;
+    
+    grid-column: 1/span 4; /*OU 5*/
+    
+}
+
+div.caixa2 {
+    background-color: rgba(255, 0, 0, 0.626);
+    text-align: center;
+
+    grid-row: 2/4;
+
+    grid-column: 1/3;
+
+}
+
+div.caixa3 {
+    background-color: rgba(0, 255, 38, 0.626);
+    text-align: center;
+
+    grid-row: 2/4;
+
+    grid-column: 3/5;
+}
